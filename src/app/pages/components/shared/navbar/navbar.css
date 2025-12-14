@@ -1,0 +1,33 @@
+/* En tu archivo de estilos para el navbar */
+
+.toolbar-spacer {
+  /* Ocupa el espacio restante en el centro */
+  flex: 1 1 auto;
+}
+
+.app-title {
+  /* Estilo del título */
+  color: white;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-right: 20px;
+}
+
+.navbar {
+  background-color: #a22146;
+}
+.nav-link {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  margin-right: 15px;
+}
+
+.icono {
+  color: white;
+}
+.active {
+  /* background-color: #a41b42; */
+  font-weight: bold;
+}

@@ -1,0 +1,33 @@
+<!-- <nav>
+  <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Contador</a>
+  <a [routerLink]="['/hero']" [routerLinkActive]="'active'">Hero Page</a>
+</nav> -->
+<mat-toolbar color="primary" class="navbar">
+  <a [routerLink]="['/']" class="app-title">
+    Mi Sistema de Gobierno
+  </a>
+
+  <span class="toolbar-spacer"></span>
+
+  <a class="nav-link" [routerLink]="['/']" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }">
+    Counter
+  </a>
+  <a class=" nav-link" [routerLink]="['/hero']" [routerLinkActive]="'active'">
+    Hero
+  </a>
+  <a class=" nav-link" [routerLink]="['/dragonball']" [routerLinkActive]="'active'">
+    Dragon
+  </a>
+  <a class=" nav-link" [routerLink]="['/dragonball-super']" [routerLinkActive]="'active'">
+    Dragon Super
+  </a>
+
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon class="icono">person</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>Mi Perfil</button>
+  <button mat-menu-item [routerLink]="['/login']">Cerrar Sesión</button>
+</mat-menu>

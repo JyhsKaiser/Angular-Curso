@@ -1,0 +1,104 @@
+/* Base del Botón: Reutilización y Reset */
+button {
+  /* Reseteo y apariencia base */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  padding: 10px 20px; /* Padding por defecto (md) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px; /* Espacio para posibles iconos */
+}
+
+/* ------------------------------------ */
+/* 1. Responsividad y Tamaños (Media Queries) */
+/* ------------------------------------ */
+
+/* Tamaño Pequeño (sm) - Ideal para móviles y listas densas */
+.btn-sm {
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
+/* Tamaño Mediano (md) - Por defecto para escritorio y tablets */
+.btn-md {
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+/* Tamaño Grande (lg) - Ideal para llamadas a la acción (CTAs) o móviles */
+.btn-lg {
+  font-size: 18px;
+  padding: 12px 24px;
+}
+
+/* Responsividad: Ajustar el tamaño a "lg" en pantallas pequeñas */
+@media (max-width: 768px) {
+  /* Tablets y móviles */
+  .btn-md,
+  .btn-sm {
+    /* Aumentamos el tamaño para que sea fácil de pulsar con el dedo */
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+}
+
+/* ------------------------------------ */
+/* 2. Estilos (Temas) */
+/* ------------------------------------ */
+
+/* Primario (Acción principal) */
+.btn-primary {
+  background-color: #007bff; /* Azul */
+  color: white;
+}
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Secundario (Acción alternativa) */
+.btn-secondary {
+  background-color: #6c757d; /* Gris */
+  color: white;
+}
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+/* Peligro (Eliminar, Cancelar) */
+.btn-danger {
+  background-color: #dc3545; /* Rojo */
+  color: white;
+}
+.btn-danger:hover {
+  background-color: #bd2130;
+}
+
+/* Advertencia */
+.btn-warning {
+  background-color: #ffc107; /* Amarillo */
+  color: #212529; /* Texto oscuro */
+}
+.btn-warning:hover {
+  background-color: #e0a800;
+}
+
+/* ------------------------------------ */
+/* 3. Comportamientos */
+/* ------------------------------------ */
+
+/* Botón de ancho completo */
+.btn-full-width {
+  width: 100%;
+}
+
+/* Deshabilitado */
+button:disabled,
+.btn-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none; /* Asegura que no emita eventos */
+}

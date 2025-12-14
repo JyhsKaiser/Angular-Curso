@@ -1,0 +1,42 @@
+<h1>Dragonball Page</h1>
+<hr />
+<section class="section">
+  <div class="form">
+    <h3>Agregar: {{ name() }}</h3>
+    <input
+      type="text"
+      [value]="name()"
+      (change)="name.set(txtName.value)"
+      (input)="name.set(txtName.value)"
+      #txtName
+    />
+    <input type="number" [value]="power()" (change)="power.set(txtPower.valueAsNumber)" #txtPower />
+
+    <!-- <app-input placeholder="Ej. Superman" initialValue={{name()}} label="Nombre"> </app-input>
+    <app-input placeholder="Ej. Volar" initialValue="{{power()}}" label="Poder" (change)> </app-input> -->
+    <app-custom-button
+      label="Guardar Cambios"
+      stylee="danger"
+      size="lg"
+      [fullWidth]="true"
+      (clicked)="onSave()"
+    >
+    </app-custom-button>
+  </div>
+  <div>
+    <h3>Lista de personajes:</h3>
+    <!-- <li *ngFor="let item of [1,2,3,4,5]; let i=index">{{i + 1}}. Goku</li> -->
+    <ul>
+      @for( character of dragonballService.characters(); track character.id; let id = $index ) {
+      @if( character.power > 1000 ){
+      <li>
+        {{ id + 1 }}. {{ character.name }} -
+        <!-- <strong [style]="character.power<9000 ? 'color: gray' : 'color: red'">
+              {{character.power}}
+            </strong> -->
+        <strong [style]="powerStyles(id)">{{ character.power }}</strong>
+      </li>
+      }@else { } }
+    </ul>
+  </div>
+</section>

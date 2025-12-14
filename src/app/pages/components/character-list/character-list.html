@@ -1,0 +1,11 @@
+<h5>{{ listTitle() }}</h5>
+<!-- <li *ngFor="let item of [1,2,3,4,5]; let i=index">{{i + 1}}. Goku</li> -->
+<ul>
+  @for( character of characters(); track character.id; let id = $index ) { @if( character.power >
+  1000 ){
+  <li>
+    <span>{{ id + 1 }}. {{ character.name }} -</span>
+    <strong [style]="powerStyles(id)">{{ character.power }}</strong>
+  </li>
+  }}
+</ul>

@@ -1,0 +1,16 @@
+<!-- <button (click)="goToHeroPage()">Go to Hero Page</button> -->
+<div class="container">
+  <h1>Counter Page</h1>
+  <button (click)="suma(1)">Increment Counter</button>
+  <button (click)="resta(1)">Decrement Counter</button>
+  <p> {{ stringInicial }} {{ counter}}</p>
+  <button (click)="reset()">Reset Counter</button>
+
+  <h2>Counter Signal {{ counterSignal() }}</h2>
+  <button (click)="sumarSignal()">Increment Signal Counter</button>
+  <button (click)="resetSignal()">Reset Signal Counter</button>
+</div>
+<div>
+  <mat-slide-toggle>Toggle me!</mat-slide-toggle>
+
+</div>

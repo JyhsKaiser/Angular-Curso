@@ -1,0 +1,19 @@
+<h1>Dragonball Super Page</h1>
+<hr />
+<section class="section">
+  <div class="form">
+    <!-- <app-character-add title="Agregar Personaje" (newCharacter)="addCharacter($event)"> -->
+    <app-character-add
+      title="Agregar Personaje"
+      (newCharacter)="dragonballService.addCharacter($event)"
+    >
+    </app-character-add>
+  </div>
+  <div>
+    <app-character-list
+      listTitle="Lista de personajes de Dragonball Super"
+      [characters]="dragonballService.characters()"
+    >
+    </app-character-list>
+  </div>
+</section>

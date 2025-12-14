@@ -1,0 +1,7 @@
+.section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.form {
+  padding: 0 100px;
+}
